@@ -15,7 +15,7 @@ import rosegraphics as rg
 
 ###############################################################################
 #
-# TODO: 2. READ these instructions, ASKING QUESTIONS as needed.
+# DONE: 2. READ these instructions, ASKING QUESTIONS as needed.
 #
 #   This module contains "broken" functions, as in m1.py.
 #   FOLLOW THE SAME STEPS as in the instructions of m1.py
@@ -111,7 +111,7 @@ def run_test_all():
 
 
 # -----------------------------------------------------------------------------
-# TODO: 3. Follow the INSTRUCTIONS AT THE TOP OF THIS MODULE
+# DONE: 3. Follow the INSTRUCTIONS AT THE TOP OF THIS MODULE
 #          to correct the mistake(s) in the following function.
 # -----------------------------------------------------------------------------
 def broken_1(circle, window):
@@ -130,10 +130,10 @@ def broken_1(circle, window):
       :type circle: rg.Circle
       :type window: rg.RoseWindow
     """
-    circle.attach(window)
-    circle2 = rg.Circle(circle.center(), 2 * circle.r)
-    circle2.attach(circle)
-    circle2.render()
+    circle.attach_to(window)
+    circle2 = rg.Circle(circle.center, 2 * circle.radius)
+    circle2.attach_to(window)
+    window.render()
 
 
 # -----------------------------------------------------------------------------
