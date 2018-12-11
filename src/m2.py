@@ -155,7 +155,7 @@ def broken_2(x, y, window):
       :type y:      int
       :type window: rg.RoseWindow
       """
-    circle = rg.Circle(x, y)
+    circle = rg.Point(x, y)
     circle.attach_to(window)
     window.render()
 
